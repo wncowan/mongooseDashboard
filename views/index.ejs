@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RESTful Aardvarks</title>
+</head>
+<body>
+    <h1>Aardvarks Crossing</h1>
+    <hr>
+    <% for (aardvark of aardvarks) { %>
+    <p>Name: <a href="<%=`/aardvarks/${aardvark._id}`%>"><%=aardvark.name%></a></p>
+    <p>Color: <%=aardvark.favorite_color%></p>
+    <p><a href="<%=`/aardvarks/edit/${aardvark._id}`%>">Edit</a> | <a href="/aardvarks/destroy/<%=aardvark._id%>">Delete</a></p>
+    <hr>
+    <% } %>
+    <p><a href="/aardvarks/new/">Create Aardvark</a></p>
+</body>
+</html>
